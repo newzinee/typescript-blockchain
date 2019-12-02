@@ -63,3 +63,13 @@ include를 src\\**\\*로 수정 (window. 맥은 src/\*\*/\*) .ts소스를 src로
 compilerOption에 outDir추가해서 dist로 해줌. 이렇게 하면 컴파일된 파일이 dist로 들어감. 컴파일된 파일(index.js, index.js.map) 삭제하고 시작 yarn start 
 
 (이때 만약에 에러난다면 $ yarn add typescript 한 다음 다시 시도)
+
+## 5
+interface
+```
+interface Human {
+    name: string,    
+    age: number,
+    gender: string
+}  // only typescript
+```
