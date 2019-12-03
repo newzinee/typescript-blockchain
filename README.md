@@ -94,3 +94,5 @@ class는 js코드에서 보여.
 그치만 public, private 같은 속성은 js에서 쓰이지 않기때문에 안 나타남. 
 ts에서는 public, private 사용 가능, js와 달리 type을 지정해줘야 함 
 
+## 7
+block 클래스 생성
