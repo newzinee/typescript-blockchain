@@ -73,3 +73,24 @@ interface Human {
     gender: string
 }  // only typescript
 ```
+
+interface는 js 코드에서는 보이지 않아.
+
+## 6
+class 
+```
+class Human {
+    public name: string;
+    public age: number;
+    public gender: string;
+    constructor(name:string, age:number, gender?:string) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+}
+```
+class는 js코드에서 보여.
+그치만 public, private 같은 속성은 js에서 쓰이지 않기때문에 안 나타남. 
+ts에서는 public, private 사용 가능, js와 달리 type을 지정해줘야 함 
+
