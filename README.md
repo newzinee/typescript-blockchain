@@ -96,3 +96,21 @@ ts에서는 public, private 사용 가능, js와 달리 type을 지정해줘야 
 
 ## 7
 block 클래스 생성
+
+## 8
+
+hash 생성을 위해 crypto-js 추가
+
+> yarn add crypto-js
+
+import * as CrpytoJS from "crypto-js";
+
+클래스 안에 static 함수 생성 
+
+아래 함수 생성 
+
+getBlockchain: 블록체인을 가져오는 함수
+
+getLastestBlock: 가장 마지막 블록을 가져오는 함수
+
+getNewTimeStamp: 새로운 타임스템프를 가져오는 함수
