@@ -1,18 +1,20 @@
 import * as CrpytoJS from "crypto-js";
 
 class Block {
-    public index: number;
-    public hash: string;
-    public previousHash: string;
-    public data: string;
-    public timestamp: number;
-
     static calculateBlockHash = (
         index: number
         , previousHash: string
         , timestamp: number
         , data: string
     ): string => CrpytoJS.SHA256(index + previousHash + timestamp + data).toString();
+
+    static validateStructure = (aBlock:Block): boolean => typeof aBlock.index === "number" && typeof aBlock.hash === "string" && typeof aBlock.previousHash === "string" && typeof aBlock.timestamp === "number" && typeof aBlock.data === "string";
+
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public data: string;
+    public timestamp: number;
 
     constructor(index: number,
         hash: string,
@@ -32,7 +34,7 @@ const genesisBlock:Block = new Block(0, "202003", "", "Hello", 123456);
 
 let blockchain: Block[] = [genesisBlock];
 
-console.log(blockchain);
+// console.log(blockchain);
 
 const getBlockchain = () : Block[] => blockchain;
 
@@ -50,6 +52,16 @@ const createNewBlock = (data:string): Block => {
     return newBlock;
 }
 
-console.log(createNewBlock("hi"), createNewBlock("bye bye"));
+// console.log(createNewBlock("hi"), createNewBlock("bye bye"));
+
+const isBlockValid = (candidateBlock: Block, previousBlock: Block): boolean => {
+    if(!Block.validateStructure(candidateBlock)) {
+        return false;
+    } else if(previousBlock.index +1 !== candidateBlock.index) {
+        return false;
+    } else if(previousBlock.hash != candidateBlock.previousHash) {
+        return false;
+    }
+};
 
 export {};

@@ -118,3 +118,7 @@ getNewTimeStamp: 새로운 타임스템프를 가져오는 함수
 ## 9
 
 createNewBlock: 블록체인을 생성하는 함수
+
+## 10
+
+isBlockValid: 유효한 블록인지 확인하는 함수 추가
