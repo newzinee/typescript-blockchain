@@ -114,3 +114,7 @@ getBlockchain: 블록체인을 가져오는 함수
 getLastestBlock: 가장 마지막 블록을 가져오는 함수
 
 getNewTimeStamp: 새로운 타임스템프를 가져오는 함수
+
+## 9
+
+createNewBlock: 블록체인을 생성하는 함수
