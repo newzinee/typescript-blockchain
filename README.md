@@ -122,3 +122,13 @@ createNewBlock: 블록체인을 생성하는 함수
 ## 10
 
 isBlockValid: 유효한 블록인지 확인하는 함수 추가
+
+## 11 
+
+유효한 블록인지 확인: isBlockValid
+
+    1. 구조 검증 : validateStructure
+
+    2. 해시 검증 : getHashforBlock
+
+addBlock: 블록 추가하는 함수
